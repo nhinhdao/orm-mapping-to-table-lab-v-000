@@ -1,7 +1,6 @@
 require'pry'
 class Student
-    # Remember, you can access your database connection anywhere in this class
-    #  with DB[:conn]
+    #DB = {:conn => SQLite3::Database.new("db/students.db")}
     attr_accessor :name, :grade
     attr_reader :id
 
@@ -33,10 +32,8 @@ class Student
     end
 
     def self.create(student_hash)
-        # binding.pry
         student = self.new(student_hash.values[0], student_hash.values[1])
         student.save
-
         student
     end
 end
