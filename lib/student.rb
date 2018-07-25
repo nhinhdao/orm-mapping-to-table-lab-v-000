@@ -1,5 +1,6 @@
 require'pry'
 class Student
+    #DB = {:conn => SQLite3::Database.new("db/students.db")}
     attr_accessor :name, :grade
     attr_reader :id
 
